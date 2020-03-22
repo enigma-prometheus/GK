@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">JeeKay</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Passwprd</string>
+    <string name="login">Login</string>
+    <string name="error_Name">Enter Full Name</string>
+    <string name="error_Email">Enter Valid Email</string>
+    <string name="error_Password">Enter Valid Password</string>
+    <string name="success_message">Registration Successful</string>
+    <string name="error_email_exists">Email Already Exists</string>
+    <string name="error_password_match">Password Doesn\'t Match</string>
+    <string name="error_valid_email_password">Wrong Email or password</string>
+    <string name="register">No Account? Register Here</string>
+    <string name="hint_name">Name</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="register_btn">Register</string>
+    <string name="login_link">Already Registered? Login Here</string>
+</resources>
