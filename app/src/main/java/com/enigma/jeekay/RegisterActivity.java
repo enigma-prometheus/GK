@@ -27,9 +27,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private TextInputLayout textInputLayoutPassword;
     private TextInputLayout textInputLayoutConfirmPassword;
 
-    private TextInputEditText name;
-    private TextInputEditText email;
-    private TextInputEditText password;
+    private TextInputEditText register_name;
+    private TextInputEditText register_email;
+    private TextInputEditText register_password;
     private TextInputEditText confirmPassword;
 
     private AppCompatButton register;
@@ -53,11 +53,15 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private void initViews(){
         nestedScrollView = (NestedScrollView)findViewById(R.id.nestedScrollView);
 
+        textInputLayoutName = (TextInputLayout)findViewById(R.id.textInputLayoutName);
         textInputLayoutEmail = (TextInputLayout)findViewById(R.id.textInputLayoutEmail);
         textInputLayoutPassword = findViewById(R.id.textInputLayoutPassword);
+        textInputLayoutConfirmPassword = (TextInputLayout)findViewById(R.id.textInputLayoutConfirmPassword);
 
-        email = (TextInputEditText)findViewById(R.id.email);
-        password = (TextInputEditText)findViewById(R.id.password);
+        register_name = (TextInputEditText)findViewById(R.id.register_name);
+        register_email = (TextInputEditText)findViewById(R.id.register_email);
+        register_password = (TextInputEditText)findViewById(R.id.register_password);
+        confirmPassword = (TextInputEditText)findViewById(R.id.confirmPassword);
 
         register = findViewById(R.id.register_btn);
 
@@ -87,26 +91,26 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
     }
     private void postDataToSQLite(){
-        if (!inputValidation.isInputEditTextFilled(name, textInputLayoutName, getString(R.string.error_Name))){
+        if (!inputValidation.isInputEditTextFilled(register_name, textInputLayoutName, getString(R.string.error_Name))){
             return;
         }
-        if (!inputValidation.isInputEditTextFilled(email, textInputLayoutEmail, getString(R.string.error_Email))){
+        if (!inputValidation.isInputEditTextFilled(register_email, textInputLayoutEmail, getString(R.string.error_Email))){
             return;
         }
-        if (!inputValidation.isInputEditTextEmail(email, textInputLayoutEmail, getString(R.string.error_Email))){
+        if (!inputValidation.isInputEditTextEmail(register_email, textInputLayoutEmail, getString(R.string.error_Email))){
             return;
         }
-        if (!inputValidation.isInputEditTextFilled(password, textInputLayoutPassword, getString(R.string.error_Password))){
+        if (!inputValidation.isInputEditTextFilled(register_password, textInputLayoutPassword, getString(R.string.error_Password))){
             return;
         }
-        if (!inputValidation.isInputEditTextMatches(password, confirmPassword, textInputLayoutConfirmPassword, getString(R.string.error_password_match))){
+        if (!inputValidation.isInputEditTextMatches(register_password, confirmPassword, textInputLayoutConfirmPassword, getString(R.string.error_password_match))){
             return;
         }
 
-        if (!databaseHelper.checkUser(email.getText().toString().trim(), password.getText().toString().trim())){
-            user.setName(name.getText().toString().trim());
-            user.setEmail(email.getText().toString().trim());
-            user.setPassword(password.getText().toString().trim());
+        if (!databaseHelper.checkUser(register_email.getText().toString().trim(), register_password.getText().toString().trim())){
+            user.setName(register_name.getText().toString().trim());
+            user.setEmail(register_email.getText().toString().trim());
+            user.setPassword(register_password.getText().toString().trim());
 
             databaseHelper.addUser(user);
 
@@ -119,9 +123,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void emptyInputEditText(){
-        name.setText(null);
-        email.setText(null);
-        password.setText(null);
+        register_name.setText(null);
+        register_email.setText(null);
+        register_password.setText(null);
         confirmPassword.setText(null);
     }
 }

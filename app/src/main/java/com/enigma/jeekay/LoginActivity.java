@@ -92,8 +92,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (!inputValidation.isInputEditTextFilled(password, textInputLayoutPassword,getString(R.string.error_Email))){
             return;
         }
-        if (databaseHelper.checkUser(email.getText().toString().trim(),
-                 password.getText().toString().trim())){
+        if (databaseHelper.checkUser(email.getText().toString().trim(), password.getText().toString().trim())){
             Intent accountIntent = new Intent(activity, UserActivity.class);
             accountIntent.putExtra("Email", email.getText().toString().trim());
             emptyInputEditText();

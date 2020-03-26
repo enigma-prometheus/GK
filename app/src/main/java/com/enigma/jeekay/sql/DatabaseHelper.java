@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import com.enigma.jeekay.model.User;
 
@@ -46,7 +47,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_USER_EMAIL, user.getEmail());
         values.put(COLUMN_USER_PASSWORD, user.getPassword());
 
-        db.insert(TABLE_USER, null, values);
+        long  rowInserted = db.insert(TABLE_USER, null, values);
+        if (rowInserted != -1 )
+            System.out.println("Row Inserted Row ID: "+rowInserted);
+        else
+            System.out.println("Error in inserting Row");
         db.close();
     }
 
