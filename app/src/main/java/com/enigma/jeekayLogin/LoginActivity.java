@@ -1,4 +1,4 @@
-package com.enigma.jeekay;
+package com.enigma.jeekayLogin;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -9,8 +9,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.enigma.jeekay.helper.InputValidation;
-import com.enigma.jeekay.sql.DatabaseHelper;
+import com.enigma.jeekayLogin.helper.InputValidation;
+import com.enigma.jeekayLogin.sql.DatabaseHelper;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;

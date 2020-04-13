@@ -1,13 +1,12 @@
-package com.enigma.jeekay.sql;
+package com.enigma.jeekayLogin.sql;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
 
-import com.enigma.jeekay.model.User;
+import com.enigma.jeekayLogin.model.User;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 

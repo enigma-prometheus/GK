@@ -1,17 +1,16 @@
-package com.enigma.jeekay;
+package com.enigma.jeekayLogin;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.widget.NestedScrollView;
 
-import com.enigma.jeekay.helper.InputValidation;
-import com.enigma.jeekay.model.User;
-import com.enigma.jeekay.sql.DatabaseHelper;
+import com.enigma.jeekayLogin.helper.InputValidation;
+import com.enigma.jeekayLogin.model.User;
+import com.enigma.jeekayLogin.sql.DatabaseHelper;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;

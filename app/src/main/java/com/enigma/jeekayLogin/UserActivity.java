@@ -1,4 +1,4 @@
-package com.enigma.jeekay;
+package com.enigma.jeekayLogin;
 
 import android.os.Bundle;
 import android.widget.TextView;

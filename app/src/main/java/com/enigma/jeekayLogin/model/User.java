@@ -1,4 +1,4 @@
-package com.enigma.jeekay.model;
+package com.enigma.jeekayLogin.model;
 
 public class User {
 

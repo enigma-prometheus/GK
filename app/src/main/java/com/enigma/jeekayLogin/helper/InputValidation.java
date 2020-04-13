@@ -1,4 +1,4 @@
-package com.enigma.jeekay.helper;
+package com.enigma.jeekayLogin.helper;
 
 import android.app.Activity;
 import android.content.Context;

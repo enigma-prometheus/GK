@@ -1,4 +1,4 @@
-package com.enigma.jeekay;
+package com.enigma.jeekayLogin;
 
 import org.junit.Test;
 
